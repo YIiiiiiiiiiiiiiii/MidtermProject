@@ -85,6 +85,9 @@ function GameSBS_Content() {
             if (isKeyPressing && event.key === 's' && sbs_state !== SBS_State.succeed) {
                 setIsKeyPressing(false);
                 set_sbs_state(SBS_State.failed);
+                if (isFading) {
+                    setIsFading(false);
+                }
             }
         };
 
